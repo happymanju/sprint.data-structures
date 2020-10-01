@@ -31,11 +31,16 @@ class LinkedList {
   }
 
   findNode(value) {
-    function getNode(node) {
-      if (node.val === value) {
-        return node;
-      }
+    let node = this.head;
+
+    while (node.next !== null) {
+      if (node.value === value) return node;
+      //   } else if(node.next === null && node.value !== value){
+      //     return null;
+      //   }
+      node = node.next;
     }
+    return null;
   }
 
   /*

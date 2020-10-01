@@ -23,6 +23,7 @@ requirements for ALL data structures in this exercise.
   traverseBreadthFirst(fn) {}
 }
 
+module.exports = Tree;
 /*
 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 |X                               X

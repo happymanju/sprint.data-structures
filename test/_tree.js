@@ -5,7 +5,7 @@ const { isClass } = require("./utilities");
 const Tree = require("../src/Tree");
 
 let tree;
-describe("Trees", () => {
+describe.only("Trees", () => {
   beforeEach(() => {
     tree = new Tree(1);
   });
