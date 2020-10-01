@@ -1,5 +1,13 @@
-class BinarySearchTree {}
+class BinarySearchTree {
+  constructor(value) {
+    this.value = value;
+  }
+  insert(value) {}
 
+  contains(value) {}
+  traverseDepthFirstInOrdr(callback) {}
+}
+module.exports = BinarySearchTree;
 /*
 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 |X                               X
