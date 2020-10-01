@@ -5,7 +5,7 @@ const { isClass } = require("./utilities");
 const LinkedList = require("../src/LinkedList");
 
 let linkedList;
-describe("Linked Lists", () => {
+describe.only("Linked Lists", () => {
   beforeEach(() => {
     linkedList = new LinkedList(5);
   });

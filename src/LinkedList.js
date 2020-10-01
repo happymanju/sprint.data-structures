@@ -11,11 +11,32 @@ class LinkedList {
     }
   }
 
-  appendToTail(value) {}
+  appendToTail(value) {
+    if (this.head === undefined) {
+      this.head = new Node(value);
+      this.tail = this.head;
+      return this.head;
+    }
+    const newNode = new Node(value);
+    this.tail.next = newNode;
+    this.tail = newNode;
+    return newNode;
+  }
 
-  removeHead() {}
+  removeHead() {
+    const headJar = this.head;
+    const rebellion = this.head.next;
+    this.head = rebellion;
+    return headJar;
+  }
 
-  findNode(value) {}
+  findNode(value) {
+    function getNode(node) {
+      if (node.val === value) {
+        return node;
+      }
+    }
+  }
 
   /*
 +-------------------------+
@@ -37,7 +58,6 @@ requirements for ALL data structures in this exercise.
 
   removeAfter(refNode) {}
 }
-
 module.exports = LinkedList;
 
 /*

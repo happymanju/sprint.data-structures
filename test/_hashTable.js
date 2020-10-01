@@ -3,10 +3,10 @@
 const { expect } = require("chai");
 const HashTable = require("../src/HashTable");
 const _ = require("underscore");
-let { 
-  simpleHash, 
-  getLastControlledArray, 
-  clearLastControlledArray 
+let {
+  simpleHash,
+  getLastControlledArray,
+  clearLastControlledArray,
 } = require("../src/utilities");
 
 const people = [
@@ -20,7 +20,7 @@ const people = [
 ];
 let hashTable;
 
-describe.only("hashTable", () => {
+describe("hashTable", () => {
   beforeEach(() => {
     hashTable = new HashTable();
   });
@@ -38,7 +38,7 @@ describe.only("hashTable", () => {
     let controlledArray = getLastControlledArray();
     expect(controlledArray).to.not.be.null;
     let size = 0;
-    controlledArray.each(value => {
+    controlledArray.each((value) => {
       if (value) size++;
     });
     expect(size).to.be.equal(1);
@@ -77,7 +77,7 @@ describe.only("hashTable", () => {
     expect(hashTable.retrieve(v2)).to.equal(v2);
     simpleHash = oldHashFunction;
   });
-  
+
   /*
   +-------------------------+
   | Advanced Requirements!! |
