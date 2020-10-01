@@ -35,9 +35,6 @@ class LinkedList {
 
     while (node.next !== null) {
       if (node.value === value) return node;
-      //   } else if(node.next === null && node.value !== value){
-      //     return null;
-      //   }
       node = node.next;
     }
     return null;
