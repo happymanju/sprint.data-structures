@@ -20,7 +20,9 @@ function simpleHash(str, tableSize) {
 // source: http://pmav.eu/stuff/javascript-hashing-functions/source.html
 
 let lastControlledArrayInstance = null;
-let clearLastControlledArray = () => { lastControlledArrayInstance = null };
+let clearLastControlledArray = () => {
+  lastControlledArrayInstance = null;
+};
 let getLastControlledArray = () => lastControlledArrayInstance;
 
 // This is a controlled array. Check it out!

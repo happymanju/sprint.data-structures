@@ -4,9 +4,28 @@ class Tree {
     this.children = [];
   }
 
-  addChild(value) {}
+  addChild(value) {
+    this.children.push(new Tree(value));
+  }
 
-  contains(value) {}
+  contains(value) {
+    let result = false;
+    const walker = (node) => {
+      if (node.value === value) {
+        result = true;
+        return;
+      }
+
+      if (node.children.length !== 0) {
+        for (let child of node.children) {
+          walker(child);
+        }
+      }
+    };
+
+    walker(this);
+    return result;
+  }
 
   /*
 +-------------------------+

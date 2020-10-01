@@ -1,11 +1,11 @@
 class Graph {
   constructor() {
     /**
-     * There are many representations of Graph. 
-     * We can store Graph in many ways. 
-     * One way is by using Adjacency List. 
+     * There are many representations of Graph.
+     * We can store Graph in many ways.
+     * One way is by using Adjacency List.
      */
-    this.nodes = {};  // Adjacency List
+    this.nodes = {}; // Adjacency List
   }
 }
 

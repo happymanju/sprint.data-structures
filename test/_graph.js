@@ -116,10 +116,10 @@ describe("Graphs", () => {
       graph.addNode(1);
       graph.addNode(3);
       graph.addNode(6);
-      graph.addEdge(6,3);
+      graph.addEdge(6, 3);
       expect(graph.nodes[6][0]).to.equal(3);
       expect(graph.nodes[3][0]).to.equal(6);
-      graph.addEdge(6,3);
+      graph.addEdge(6, 3);
       expect(graph.nodes[6].length).to.equal(1);
       expect(graph.nodes[3].length).to.equal(1);
     });
