@@ -8,7 +8,7 @@ const { isClass } = require("./utilities");
 let tree;
 let anotherTree;
 let fullBST;
-describe("The Binary Search Tree", () => {
+describe.only("The Binary Search Tree", () => {
   beforeEach(() => {
     tree = new BinarySearchTree(1);
 
