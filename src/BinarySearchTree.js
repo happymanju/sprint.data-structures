@@ -36,6 +36,32 @@ class BinarySearchTree {
       }
     }
   }
+
+  contains(value) {
+    let currentNode = this;
+    let flag = false;
+
+    while (!flag) {
+      if (value === currentNode.value) {
+        flag = true;
+      } else if (value > currentNode.value) {
+        if (currentNode.right) {
+          currentNode = currentNode.right;
+        } else {
+          return flag;
+        }
+      } else if (value < currentNode.value) {
+        if (currentNode.left) {
+          currentNode = currentNode.left;
+        } else {
+          return flag;
+        }
+      }
+    }
+    return flag;
+  }
+
+  traverseDepthFirstInOrder(callback) {}
 }
 module.exports = BinarySearchTree;
 /*
