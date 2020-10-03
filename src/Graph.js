@@ -33,7 +33,14 @@ class Graph {
     return;
   }
 
-  contains(targetValue) {}
+  contains(targetNode) {
+    for (let node in this.nodes) {
+      if (node == targetNode) {
+        return true;
+      }
+    }
+    return false;
+  }
 
   addEdge(node1, node2) {
     if (!this.nodes[node1] || !this.nodes[node2]) {
