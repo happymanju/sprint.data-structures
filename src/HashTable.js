@@ -14,10 +14,18 @@ class HashTable {
 
   retrieve(key) {
     const index = simpleHash(key, this.limit);
-    return this.storage.get(index);
+    const retrievedBucket = this.storage.get(index);
+    return retrievedBucket;
   }
 
-  remove(key) {}
+  remove(key) {
+    const index = simpleHash(key, this.limit);
+    if (!this.storage.get(index)) {
+      return false;
+    }
+    this.storage.set(index, null);
+    return true;
+  }
 }
 
 module.exports = HashTable;
