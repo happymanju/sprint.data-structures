@@ -35,7 +35,20 @@ class Graph {
 
   contains(targetValue) {}
 
-  addEdge(node1, node2) {}
+  addEdge(node1, node2) {
+    if (!this.nodes[node1] || !this.nodes[node2]) {
+      return "Invalid node value";
+    }
+    if (
+      this.nodes[String(node1)].includes(node2) ||
+      this.nodes[String(node2)].includes(node1)
+    ) {
+      return "duplicate edge";
+    }
+    this.nodes[node1].push(node2);
+    this.nodes[node2].push(node1);
+    return;
+  }
 
   removeEdge(node1, node2) {}
 
