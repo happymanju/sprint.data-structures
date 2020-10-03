@@ -20,7 +20,7 @@ const people = [
 ];
 let hashTable;
 
-describe("hashTable", () => {
+describe.only("hashTable", () => {
   beforeEach(() => {
     hashTable = new HashTable();
   });

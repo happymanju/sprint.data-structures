@@ -5,7 +5,7 @@ const { isClass } = require("./utilities");
 const Graph = require("../src/Graph");
 
 let graph;
-describe.only("Graphs", () => {
+describe("Graphs", () => {
   beforeEach(() => {
     graph = new Graph();
   });
