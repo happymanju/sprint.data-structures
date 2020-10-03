@@ -62,38 +62,21 @@ class BinarySearchTree {
   }
 
   traverseDepthFirstInOrder(callback) {
-    /*
-    function Dwalk (node, callback) {
-      //go left
+    function walk(node, callback) {
       if (node.left) {
-        Dwalk(node.left, callback);
-      };
+        walk(node.left, callback);
+      }
 
-      //on the way back
       callback(node);
 
-      //go back down on the right
       if (node.right) {
-        Dwalk(node.right, callback);
-      };
-      */
-
-    function depthWalk(currentNode, callBack) {
-      if (!currentNode.left && !currentNode.right) {
-        callback(currentNode);
-        return;
+        walk(node.right, callback);
       }
 
-      if (currentNode.left) {
-        depthWalk(currentNode.left);
-      }
-
-      if (currentNode.right) {
-        depthWalk(currentNode.right);
-      }
+      return;
     }
 
-    depthWalk(this, callback);
+    walk(this, callback);
     return;
   }
 }

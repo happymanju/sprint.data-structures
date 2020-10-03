@@ -7,7 +7,42 @@ class Graph {
      */
     this.nodes = {}; // Adjacency List
   }
+
+  addNode(node) {
+    if (this.nodes[node]) {
+      this.nodes[node] = this.nodes[node];
+    } else {
+      this.nodes[node] = [];
+    }
+
+    return;
+  }
+
+  removeNode(node) {
+    if (!this.nodes[node]) {
+      return `${node} does not exist. Please enter a valid node.`;
+    } else {
+      for (let otherNode in this.nodes) {
+        if (this.nodes[otherNode].includes(node)) {
+          const removeIndex = this.nodes[otherNode].indexOf(node);
+          this.nodes[otherNode].splice(removeIndex, 1);
+        }
+      }
+      delete this.nodes[node];
+    }
+    return;
+  }
+
+  contains(targetValue) {}
+
+  addEdge(node1, node2) {}
+
+  removeEdge(node1, node2) {}
+
+  hasEdge(node) {}
 }
+
+module.exports = Graph;
 
 /*
 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
