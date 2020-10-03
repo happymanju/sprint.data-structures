@@ -50,9 +50,33 @@ class Graph {
     return;
   }
 
-  removeEdge(node1, node2) {}
+  removeEdge(node1, node2) {
+    if (!this.nodes[node1] || !this.nodes[node2]) {
+      return "Invalid node value";
+    }
+    if (
+      this.nodes[String(node1)].includes(node2) ||
+      this.nodes[String(node2)].includes(node1)
+    ) {
+      this.nodes[node1].splice(this.nodes[node1].indexOf(node2), 1);
+      this.nodes[node2].splice(this.nodes[node2].indexOf(node1), 1);
+    }
+    return;
+  }
 
-  hasEdge(node) {}
+  hasEdge(node1, node2) {
+    const node1Array = this.nodes[node1];
+    const node2Array = this.nodes[node2];
+    if (!node1Array || !node2Array) {
+      return "Invalid node value";
+    } else if (!node1Array && !node2Array) {
+      return "Invalid node value";
+    }
+    if (node1Array.includes(node2) && node2Array.includes(node1)) {
+      return true;
+    }
+    return false;
+  }
 }
 
 module.exports = Graph;
